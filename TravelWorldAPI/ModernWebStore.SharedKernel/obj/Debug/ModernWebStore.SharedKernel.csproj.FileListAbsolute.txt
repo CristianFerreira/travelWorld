@@ -1,0 +1,4 @@
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.SharedKernel\bin\Debug\ModernWebStore.SharedKernel.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.SharedKernel\bin\Debug\ModernWebStore.SharedKernel.pdb
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.SharedKernel\obj\Debug\ModernWebStore.SharedKernel.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.SharedKernel\obj\Debug\ModernWebStore.SharedKernel.pdb

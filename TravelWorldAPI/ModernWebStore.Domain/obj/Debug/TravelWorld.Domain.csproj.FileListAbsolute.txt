@@ -1,0 +1,7 @@
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\bin\Debug\ModernWebStore.Domain.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\bin\Debug\ModernWebStore.Domain.pdb
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\bin\Debug\ModernWebStore.SharedKernel.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\bin\Debug\ModernWebStore.SharedKernel.pdb
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\obj\Debug\TravelWorld.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\obj\Debug\ModernWebStore.Domain.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Domain\obj\Debug\ModernWebStore.Domain.pdb

@@ -1,0 +1,35 @@
+﻿using ModernWebStore.Domain.Entities;
+using ModernWebStore.Infra.Persistence.Map;
+using System.Data.Entity;
+
+namespace ModernWebStore.Infra.Persistence.DataContexts
+{
+    public class StoreDataContext : DbContext
+    {
+        public StoreDataContext() :
+            base("ConnectionString")
+        {
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
+        }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Continent> Continents { get; set; }
+        public DbSet<Post> Posts { get; set; }
+
+        
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
+            modelBuilder.Configurations.Add(new PostMap());
+            modelBuilder.Configurations.Add(new CityMap());
+            modelBuilder.Configurations.Add(new ContinentMap());
+            modelBuilder.Configurations.Add(new CountryMap());
+        }
+    }
+}

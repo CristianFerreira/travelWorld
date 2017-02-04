@@ -1,0 +1,97 @@
+.cabecalho { height: 15%; background: #01257B; text-decoration: none; border-width: 0; }
+.topBarTopMenu { text-align: right; margin-top: 5px; width: 400px; font-family: Arial, Helvetica, sans-serif; float: right; height: 30px; color: #ffffff; font-size: 8pt; margin-right: 10px; color: White; }
+
+.link-color-black {
+    color: black !important;
+}
+
+
+.icon {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+.fabIcon{
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.cristian{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 3px solid #eeeeee;
+    padding: 20px 0 0 0;
+}
+.foto{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: url(../../assets/img/teste/cristian.jpg) no-repeat center;
+    background-size: cover;
+    margin-right: -14px;
+    z-index: 11;
+}
+
+.nome{
+    float: left;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: none;
+    background: #ffd973;
+    color: #64552d;
+    font-size: 12px;
+    margin: -15px 0 -7px 20px;
+    border-radius: 3px;
+}
+
+
+.facebook{
+        width: 335px;
+    background: #fff;
+    padding: 6px 6px 0 6px;
+    height: 310px;
+    margin: 0 0 0 0;
+    border-radius: 3px;
+}
+
+.instagram-box{
+    width: 335px;
+    background: #fff;
+    padding: 6px 6px 0 6px;
+    height: 310px;
+    margin: 0 0 0 0;
+    border-radius: 3px;
+
+}
+
+
+.fb_iframe_widget{
+    display: inline-block;
+    position: relative;
+}
+
+.footer{
+    background: #ffd973;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Paginacao */
+
+.md-button.md-warn.md-raised, .md-button.md-default-theme.md-warn.md-fab, .md-button.md-warn.md-fab {
+    color: rgb(255,255,255);
+    background-color: rgb(255, 64, 129);
+}
+
+/*.md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-primary.md-raised:not([disabled]):hover, .md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-primary.md-fab:not([disabled]):hover {
+    background-color: rgb(175, 177, 177);
+}
+
+.md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab {
+    color: rgba(255,255,255,0.87);
+    background-color: rgb(175, 177, 177);
+}*/

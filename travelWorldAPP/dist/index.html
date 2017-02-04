@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="travel_World">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="KTAX SOS Workflow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel World</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="app/build/css/app-style.min.css">
+</head>
+
+<body ng-cloak>
+    <div ng-controller="SideBarController as vm">
+        <md-nav-bar md-selected-nav-item="vm.currentNavItem" nav-bar-aria-label="navigation links" layout-align="center center">
+            <div flex="10"></div>
+            <div flex="90" layout="row">
+                
+                    <md-nav-item  name="page10">Home</md-nav-item>
+                    <md-nav-item ng-click="" name="page9">Home</md-nav-item>
+                    
+                    </md-nav-bar>
+             
+                <md-nav-item md-nav-click="goto('page1')" name="page1">Home</md-nav-item>
+                <md-nav-item md-nav-click="goto('page2')" name="page2">Europa</md-nav-item>
+                <md-nav-item md-nav-click="goto('page3')" name="page3">America do Norte</md-nav-item>
+                <md-nav-item md-nav-href="#categorias" name="page4">Categorias</md-nav-item>
+              
+           
+                
+            </div>
+        </md-nav-bar>
+    </div>
+    <div ng-view></div>
+    <script src="app/build/js/app-scripts.min.js"></script>
+    <script src="app/build/js/app-ts.min.js"></script>
+</body>
+
+</html>

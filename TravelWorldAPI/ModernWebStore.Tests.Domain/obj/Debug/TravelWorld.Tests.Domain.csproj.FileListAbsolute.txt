@@ -1,0 +1,10 @@
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\ModernWebStore.Tests.Domain.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\ModernWebStore.Tests.Domain.pdb
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\ModernWebStore.Domain.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\ModernWebStore.SharedKernel.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\ModernWebStore.Domain.pdb
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\bin\Debug\ModernWebStore.SharedKernel.pdb
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\obj\Debug\TravelWorld.Tests.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\obj\Debug\ModernWebStore.Tests.Domain.dll
+C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.Tests.Domain\obj\Debug\ModernWebStore.Tests.Domain.pdb
