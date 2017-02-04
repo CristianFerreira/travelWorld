@@ -88,20 +88,19 @@ module Travel_World {
      public loadContinents() :void{
            this.continentService.listAll()
                 .then((data) => {                 
-                    this.continents = data;
-                    this.popularCountry();                               
+                    this.continents = data;                             
                 })
                 .catch((response) => console.log("Não carregou os continents, erro: " + response));
     }
 
-    public popularCountry(){
-         this.cities.forEach(city => {
-             this.continents.forEach(continent => {
-                 if(city.country.idContinent == continent.id)
-                    city.country.continent = continent;
-             });
-         });
-    }
+    // public popularCountry(){
+    //      this.cities.forEach(city => {
+    //          this.continents.forEach(continent => {
+    //              if(city.country.idContinent == continent.id)
+    //                 city.country.continent = continent;
+    //          });
+    //      });
+    // }
 
 
      public modalCreateCity (ev: any) : void {

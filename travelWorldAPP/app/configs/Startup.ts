@@ -1,20 +1,20 @@
-/// <reference path="_all.ts" />
+// /// <reference path="_all.ts" />
 
-module Travel_World {
-    'use strict';
+// module Travel_World {
+//     'use strict';
 
-    function config() {
+//     function config() {
         
-    }
+//     }
     
-    function start($rootScope: IRootScope, autenticacaoService: AutenticacaoService) {
+//     function start($rootScope: IRootScope, autenticacaoService: AutenticacaoService) {
         
-        autenticacaoService.carregaUsuarioAutenticado();
-    }
+//         autenticacaoService.carregaUsuarioAutenticado();
+//     }
 
     
-	angular.module(appConfig.appName).config(config);
+// 	angular.module(appConfig.appName).config(config);
     
-	start.$inject = ['$rootScope', 'AutenticacaoService'];
-	angular.module(appConfig.appName).run(start);
-}
+// 	start.$inject = ['$rootScope', 'AutenticacaoService'];
+// 	angular.module(appConfig.appName).run(start);
+// }

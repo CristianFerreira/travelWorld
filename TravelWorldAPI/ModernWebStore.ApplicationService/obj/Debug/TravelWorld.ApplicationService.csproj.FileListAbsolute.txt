@@ -11,3 +11,16 @@ C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationServi
 C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationService\obj\Debug\TravelWorld.ApplicationService.csprojResolveAssemblyReference.cache
 C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationService\obj\Debug\ModernWebStore.ApplicationService.dll
 C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationService\obj\Debug\ModernWebStore.ApplicationService.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.ApplicationService.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.ApplicationService.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.Domain.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.Infra.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.SharedKernel.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\EntityFramework.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.Domain.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.Infra.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.SharedKernel.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\EntityFramework.xml
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\obj\Debug\TravelWorld.ApplicationService.csprojResolveAssemblyReference.cache
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\obj\Debug\ModernWebStore.ApplicationService.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\obj\Debug\ModernWebStore.ApplicationService.pdb
