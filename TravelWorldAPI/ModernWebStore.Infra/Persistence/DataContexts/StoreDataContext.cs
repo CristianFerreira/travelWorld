@@ -7,7 +7,7 @@ namespace ModernWebStore.Infra.Persistence.DataContexts
     public class StoreDataContext : DbContext
     {
         public StoreDataContext() :
-            base("ConnectionString")
+            base("TravelWorld_ConnectionString")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;

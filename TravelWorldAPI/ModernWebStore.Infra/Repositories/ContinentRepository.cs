@@ -30,7 +30,7 @@ namespace ModernWebStore.Infra.Repositories
 
         public List<Continent> Get()
         {
-            return _context.Continents.Include(c => c.countries).ToList();
+            return _context.Continents.Include(c => c.Countries).ToList();
         }
 
         public Continent Get(int id)
@@ -41,7 +41,7 @@ namespace ModernWebStore.Infra.Repositories
         public List<Continent> Get(int skip, int take)
         {
              return _context.Continents
-                 .OrderBy(x => x.name)
+                 .OrderBy(x => x.Name)
                  .Skip(skip).Take(take).ToList();
         }
 

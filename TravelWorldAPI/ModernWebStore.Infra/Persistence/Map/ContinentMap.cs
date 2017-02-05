@@ -11,12 +11,13 @@ namespace ModernWebStore.Infra.Persistence.Map
 
             HasKey(x => x.Id);
 
-            Property(x => x.name)
+            Property(x => x.Name)
                 .HasMaxLength(60)
                 .IsRequired();
 
-            HasMany(x => x.countries);
-               
+            HasMany(x => x.Countries)
+                .WithRequired(x => x.Continent);
+
         }
     }
 }

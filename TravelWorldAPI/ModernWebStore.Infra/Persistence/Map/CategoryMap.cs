@@ -11,7 +11,7 @@ namespace ModernWebStore.Infra.Persistence.Map
 
             HasKey(x => x.Id);
 
-            Property(x => x.name)
+            Property(x => x.Name)
                 .HasMaxLength(60)
                 .IsRequired();
         }

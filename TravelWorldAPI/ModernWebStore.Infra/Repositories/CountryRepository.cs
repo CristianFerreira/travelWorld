@@ -31,25 +31,25 @@ namespace ModernWebStore.Infra.Repositories
 
         public List<Country> Get()
         {
-            return _context.Countries.Include(c => c.continent).ToList();
+            return _context.Countries.Include(c => c.Continent).ToList();
         }
 
         public Country Get(int id)
         {
-            return _context.Countries.Include(c => c.continent).ToList().Find(c => c.Id == id);
+            return _context.Countries.Include(c => c.Continent).ToList().Find(c => c.Id == id);
         }
 
         public List<Country> Get(int skip, int take)
         {
             return _context.Countries
-                .OrderBy(x => x.name)
+                .OrderBy(x => x.Name)
                 .Skip(skip).Take(take).ToList();
         }
 
         public void Update(Country country)
         {
             
-            _context.Countries.Attach(country);
+            //_context.Countries.Attach(country);
             _context.Entry<Country>(country).State = EntityState.Modified;
         }
     }

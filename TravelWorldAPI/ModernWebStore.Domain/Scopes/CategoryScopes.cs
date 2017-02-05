@@ -10,8 +10,8 @@ namespace ModernWebStore.Domain.Scopes
         {
             return AssertionConcern.IsSatisfiedBy
             (
-                AssertionConcern.AssertNotEmpty(category.name, "O nome é obrigatório"),
-                AssertionConcern.AssertLength(category.name, 3, 45,"Nome deve ter entre 3 a 45 caracteres")
+                AssertionConcern.AssertNotEmpty(category.Name, "O nome é obrigatório"),
+                AssertionConcern.AssertLength(category.Name, 3, 45,"Nome deve ter entre 3 a 45 caracteres")
         
              );
         }

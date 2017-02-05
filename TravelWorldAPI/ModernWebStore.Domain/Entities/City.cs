@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModernWebStore.Domain.Entities
@@ -6,9 +7,9 @@ namespace ModernWebStore.Domain.Entities
     public class City
     {
         public int Id { get; set; }
-        public string name { get; set; }
-        public int idCountry { get; set; }
-
+        public string Name { get; set; }
+        public int CountryId { get; set; }
         public Country Country { get; set; }
+        public ICollection<Post> Posts { get; set; }
     }
 }

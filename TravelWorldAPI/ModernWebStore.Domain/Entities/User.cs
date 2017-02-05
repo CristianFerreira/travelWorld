@@ -1,6 +1,7 @@
 ﻿
 using ModernWebStore.Domain.Scopes;
 using ModernWebStore.SharedKernel.Helpers;
+using System.Collections.Generic;
 
 namespace ModernWebStore.Domain.Entities
 {
@@ -19,6 +20,8 @@ namespace ModernWebStore.Domain.Entities
         public string Email { get; private set; }
         public string Password { get; private set; }
         public bool IsAdmin { get; private set; }
+
+        public virtual ICollection<Post> posts { get; set; }
 
         public void Register()
         {

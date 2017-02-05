@@ -50,7 +50,7 @@ namespace ModernWebStore.Api.Controllers
         [Route("api/cities/create")]
         public Task<HttpResponseMessage> Post(City city)
         {
-            city.idCountry = city.Country.Id;
+            city.CountryId = city.Country.Id;
             var cityRegister = _service.Create(city);
             return CreateResponse(HttpStatusCode.Created, cityRegister);
         }

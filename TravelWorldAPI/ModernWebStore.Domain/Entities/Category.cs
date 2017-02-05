@@ -1,5 +1,6 @@
 ﻿
 using ModernWebStore.Domain.Scopes;
+using System.Collections.Generic;
 
 namespace ModernWebStore.Domain.Entities
 {
@@ -7,7 +8,9 @@ namespace ModernWebStore.Domain.Entities
     {
   
         public int Id { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
+
+        public ICollection<Post> Posts { get; set; }
 
         public void Register()
         {
@@ -19,7 +22,7 @@ namespace ModernWebStore.Domain.Entities
         {
             if (!this.UpdateCategoryScopeIsValid(name))
                 return;
-            this.name = name;
+            this.Name = name;
         }
     }
 }

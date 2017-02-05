@@ -10,7 +10,7 @@ namespace ModernWebStore.Domain.Entities
     {
    
         public int Id { get; set; }
-        public string name { get; set; }
-        public virtual ICollection<Country> countries { get; set; }
+        public string Name { get; set; }
+        public ICollection<Country> Countries { get; set; }
     }
 }

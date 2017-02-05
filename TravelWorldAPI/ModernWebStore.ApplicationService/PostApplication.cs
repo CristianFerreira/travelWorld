@@ -17,14 +17,42 @@ namespace ModernWebStore.ApplicationService
             this._repository = repository;
         }
 
-        public void Create(Post post)
+        public Post Create(Post post)
         {
             _repository.Create(post);
+
+            if (Commit())
+                return post;
+
+            return null;
         }
 
-        public void Delete(Post post)
+        public Post Delete(int id)
         {
+            var post = _repository.Get(id);
             _repository.Delete(post);
+
+            if (Commit())
+                return post;
+
+            return null;
+        }
+
+        public List<Post> DeleteAlot(List<Post> posts)
+        {
+            var listPost = new List<Post>();
+            foreach (var post in posts)
+            {
+                var postDelete = _repository.Get(post.Id);
+                _repository.Delete(postDelete);
+
+                if (Commit())
+                    listPost.Add(postDelete);
+                else
+                    return null;
+            }
+
+            return listPost;
         }
 
         public List<Post> Get()
@@ -42,9 +70,14 @@ namespace ModernWebStore.ApplicationService
             return _repository.Get(skip, take);
         }
 
-        public void Update(Post post)
+        public Post Update(Post post)
         {
             _repository.Update(post);
+
+            if (Commit())
+                return post;
+
+            return null;
         }
     }
 }

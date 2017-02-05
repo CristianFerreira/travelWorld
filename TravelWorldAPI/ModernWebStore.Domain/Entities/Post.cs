@@ -5,21 +5,20 @@ namespace ModernWebStore.Domain.Entities
     public class Post
     {
         public int Id { get; set; }
-        public string title { get; set; }
-        public string description { get; set; }
-        public DateTime date { get; set; }
-        public string picture { get; set; }
-        public string txtPicture { get; set; }
-        public string video { get; set; }
+        public string Title { get; set; }
+        public string Hashtag { get; set; }
+        public DateTime Date { get; set; }
+        public string Picture { get; set; }
+        public string Video { get; set; }
 
-        public int idCategory { get; set; }
-        public Category category { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
 
-        public int idContinent { get; set; }
-        public Continent continent { get; set; }
+        public int CityId { get; set; }
+        public City City { get; set; }
 
-        public int idUser { get; set; }
-        public User users { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
 
     }
 }

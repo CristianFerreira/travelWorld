@@ -6,11 +6,11 @@ namespace ModernWebStore.Domain.Entities
     public class Country
     {
         public int Id { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public int idContinent { get; set; }
-        public Continent continent { get; set; }
+        public int ContinentId { get; set; }
+        public Continent Continent { get; set; }
 
-        public virtual ICollection<City> cities { get; set; }
+        public ICollection<City> Cities { get; set; }
     }
 }

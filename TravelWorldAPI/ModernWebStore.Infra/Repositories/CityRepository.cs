@@ -30,24 +30,24 @@ namespace ModernWebStore.Infra.Repositories
 
         public List<City> Get()
         {
-            return _context.Cities.Include(c => c.Country.continent).ToList();
+            return _context.Cities.Include(c => c.Country.Continent).ToList();
         }
 
         public City Get(int id)
         {
-            return _context.Cities.Include(c => c.Country.continent).ToList().Find(c => c.Id == id);
+            return _context.Cities.Include(c => c.Country.Continent).ToList().Find(c => c.Id == id);
         }
 
         public List<City> Get(int skip, int take)
         {
             return _context.Cities
-               .OrderBy(x => x.name)
+               .OrderBy(x => x.Name)
                .Skip(skip).Take(take).ToList();
         }
 
         public void Update(City city)
         {
-            _context.Cities.Attach(city);
+            //_context.Cities.Attach(city);
             _context.Entry(city)
                  .State = EntityState.Modified;
         }

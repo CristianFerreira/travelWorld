@@ -39,7 +39,7 @@ namespace ModernWebStore.Infra.Repositories
         public List<Category> Get(int skip, int take)
         {
             return _context.Categories
-                .OrderBy(x => x.name)
+                .OrderBy(x => x.Name)
                 .Skip(skip).Take(take).ToList();
         }
 

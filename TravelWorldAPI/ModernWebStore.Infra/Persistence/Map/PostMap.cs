@@ -12,22 +12,21 @@ namespace ModernWebStore.Infra.Persistence.Map
 
             HasKey(x => x.Id);
 
-            Property(x => x.title)
-                .HasMaxLength(60)
+            Property(x => x.Title)
+                .HasMaxLength(100)
                 .IsRequired();
 
-            Property(x => x.description)
-                .HasMaxLength(2000)
+            Property(x => x.Hashtag)
+                .HasMaxLength(200)
                 .IsRequired();
 
-            Property(x => x.date).IsRequired();
-            Property(x => x.txtPicture).HasMaxLength(100);
-            Property(x => x.picture).HasMaxLength(200);
-            Property(x => x.video).HasMaxLength(200);
+            Property(x => x.Date).IsRequired();
+            Property(x => x.Picture).HasMaxLength(100);
+            Property(x => x.Video).HasMaxLength(200);
 
-            HasRequired(x => x.continent);
-            HasRequired(x => x.category);
-            HasRequired(x => x.users);
+            HasRequired(x => x.City);
+            HasRequired(x => x.Category);
+            HasRequired(x => x.User);
         }    
     }
 }
