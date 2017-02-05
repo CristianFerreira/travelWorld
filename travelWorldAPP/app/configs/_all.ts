@@ -19,7 +19,7 @@
 /// <reference path="../contracts/ITimeoutService.ts" />
 
 
-/// <reference path="../models/api-models/SosUsuario.ts" />
+/// <reference path="../models/api-models/User.ts" />
 /// <reference path="../models/api-models/SistemaContexto.ts" />
 /// <reference path="../models/api-models/Post.ts" />
 /// <reference path="../models/api-models/Category.ts" />

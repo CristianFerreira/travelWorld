@@ -4,7 +4,7 @@
 module Travel_World {
     export class SistemaContexto {
         
-        public usuarioLogado: SosUsuario;
+        public usuarioLogado: User;
 
         constructor() {
 
