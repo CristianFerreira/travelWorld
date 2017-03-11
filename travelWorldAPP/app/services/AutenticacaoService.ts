@@ -54,13 +54,13 @@ module Travel_World {
                 this.$location.path('/');
             }
 
-            // caso nao esteja logado volta para o login
-            this.rootScope.$on("$routeChangeStart", 
-                (event, next, current) => {
-                    if (this.rootScope.token == null) {
-                        this.$location.path('/login');
-                    }
-            });
+            // // caso nao esteja logado volta para o login
+            // this.rootScope.$on("$routeChangeStart", 
+            //     (event, next, current) => {
+            //         if (this.rootScope.token == null) {
+            //             this.$location.path('/login');
+            //         }
+            // });
         }
 
         private autenticacao(login: LoginModel): any {

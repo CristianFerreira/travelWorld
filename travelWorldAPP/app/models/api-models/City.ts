@@ -3,7 +3,7 @@ module Travel_World {
     export class City {
         public id: number;
         public name: string;
-        public idCountry: number;
+        public countryId: number;
         
         public country: Country;
 

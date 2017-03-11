@@ -93,16 +93,6 @@ module Travel_World {
                 .catch((response) => console.log("Não carregou os continents, erro: " + response));
     }
 
-    // public popularCountry(){
-    //      this.cities.forEach(city => {
-    //          this.continents.forEach(continent => {
-    //              if(city.country.idContinent == continent.id)
-    //                 city.country.continent = continent;
-    //          });
-    //      });
-    // }
-
-
      public modalCreateCity (ev: any) : void {
          this.mdDialog.show({
             controller: "ModalCreateCityController",

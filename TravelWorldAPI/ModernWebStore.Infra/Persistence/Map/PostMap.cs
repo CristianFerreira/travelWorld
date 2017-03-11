@@ -17,11 +17,12 @@ namespace ModernWebStore.Infra.Persistence.Map
                 .IsRequired();
 
             Property(x => x.Hashtag)
-                .HasMaxLength(200)
-                .IsRequired();
+                .HasMaxLength(200);
+            
 
             Property(x => x.Date).IsRequired();
             Property(x => x.Picture).HasMaxLength(100);
+            Property(x => x.Text).HasMaxLength(5000);
             Property(x => x.Video).HasMaxLength(200);
 
             HasRequired(x => x.City);

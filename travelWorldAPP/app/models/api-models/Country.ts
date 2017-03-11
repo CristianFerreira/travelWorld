@@ -3,7 +3,7 @@ module Travel_World {
     export class Country {
         public id: number;
         public name: string;
-        public idContinent: number;
+        public continentId: number;
         public continent: Continent;
 
         public cities: Array<City>;

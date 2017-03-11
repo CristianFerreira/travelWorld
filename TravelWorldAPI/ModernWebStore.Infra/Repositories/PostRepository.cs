@@ -1,6 +1,6 @@
 ﻿using ModernWebStore.Domain.Entities;
 using ModernWebStore.Domain.Repositories;
-using ModernWebStore.Domain.Specs;
+using System.Data.Entity;
 using ModernWebStore.Infra.Persistence.DataContexts;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +18,8 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Create(Post post)
         {
+
+            post.UserId = 1;
             _context.Posts.Add(post);
         }
 
@@ -28,12 +30,25 @@ namespace ModernWebStore.Infra.Repositories
 
         public List<Post> Get()
         {
-            return _context.Posts.ToList();
+            return _context.Posts.Include(p => p.User).Include(p => p.Category).Include(p => p.City).ToList();
         }
 
         public Post Get(int id)
         {
-            return _context.Posts.Find(id);
+            return _context.Posts.Include(p => p.User).Include(p => p.Category)
+                    .Include(p => p.City).ToList().Find(p => p.Id == id);
+        }
+
+        public List<Post> BuscarPorCategoria(string categoria)
+        {
+            return _context.Posts.Include(p => p.User).Include(p => p.Category).Include(p => p.City)
+                    .Where(p => p.Category.Name == categoria).ToList();
+        }
+
+        public List<Post> BuscarPorCity(string city)
+        {
+            return _context.Posts.Include(p => p.User).Include(p => p.Category).Include(p => p.City)
+                    .Where(p => p.City.Name == city).ToList();
         }
 
         public List<Post> Get(int skip, int take)
@@ -45,8 +60,9 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Update(Post post)
         {
+            post.UserId = 1;
             _context.Entry<Post>(post)
-                .State = System.Data.Entity.EntityState.Modified;
+                .State = EntityState.Modified;
         }
     }
 }

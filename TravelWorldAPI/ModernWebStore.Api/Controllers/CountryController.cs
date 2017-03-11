@@ -50,7 +50,6 @@ namespace ModernWebStore.Api.Controllers
         [Route("api/countries/create")]
         public Task<HttpResponseMessage> Post(Country country)
         {
-            country.ContinentId = country.Continent.Id;
             var countryRegister = _service.Create(country);
             return CreateResponse(HttpStatusCode.Created, countryRegister);
         }
@@ -60,7 +59,7 @@ namespace ModernWebStore.Api.Controllers
         [Route("api/countries/update")]
         public Task<HttpResponseMessage> Update(Country country)
         {
-            country.ContinentId = country.Continent.Id;
+           
             var countryUpdate = _service.Update(country);
             return CreateResponse(HttpStatusCode.OK, countryUpdate);
         }

@@ -20,11 +20,15 @@ C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\ModernWebStore.
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\EntityFramework.dll
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\EntityFramework.SqlServer.dll
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\ModernWebStore.Domain.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\MySql.Data.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\mysql.data.entity.EF6.dll
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\ModernWebStore.SharedKernel.dll
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\ModernWebStore.Domain.pdb
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\EntityFramework.xml
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\EntityFramework.SqlServer.xml
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\bin\Debug\ModernWebStore.SharedKernel.pdb
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\obj\Debug\ModernWebStore.Infra.csprojResolveAssemblyReference.cache
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\obj\Debug\ModernWebStore.Infra.Migrations.Profile.resources
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\obj\Debug\ModernWebStore.Infra.csproj.GenerateResource.Cache
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\obj\Debug\ModernWebStore.Infra.dll
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.Infra\obj\Debug\ModernWebStore.Infra.pdb

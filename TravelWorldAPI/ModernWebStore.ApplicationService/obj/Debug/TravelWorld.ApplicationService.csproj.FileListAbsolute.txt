@@ -11,6 +11,7 @@ C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationServi
 C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationService\obj\Debug\TravelWorld.ApplicationService.csprojResolveAssemblyReference.cache
 C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationService\obj\Debug\ModernWebStore.ApplicationService.dll
 C:\Users\Cristian\Desktop\mwa-api\ModernWebStore\ModernWebStore.ApplicationService\obj\Debug\ModernWebStore.ApplicationService.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.ApplicationService.dll.config
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.ApplicationService.dll
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.ApplicationService.pdb
 C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.ApplicationService\bin\Debug\ModernWebStore.Domain.dll

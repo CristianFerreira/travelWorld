@@ -43,6 +43,7 @@
     <Compile Include="ApplicationService.cs" />
     <Compile Include="CategoryApplication.cs" />
     <Compile Include="CityApplication.cs" />
+    <Compile Include="CommentApplication.cs" />
     <Compile Include="ContinentApplication.cs" />
     <Compile Include="CountryApplication.cs" />
     <Compile Include="PostApplication.cs" />
@@ -62,6 +63,9 @@
       <Project>{dece94cb-9512-4e89-a487-2c36a8581706}</Project>
       <Name>TravelWorld.SharedKernel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

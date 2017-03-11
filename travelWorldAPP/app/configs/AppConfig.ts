@@ -43,6 +43,24 @@ var appConfig = {
                 saveCountry: appConfig.rootServiceRoute + "api/countries/create",
                 deleteAlotCountry: appConfig.rootServiceRoute + "api/countries/deleteAlot"    
             },
+              post: {
+                listAll: appConfig.rootServiceRoute + "api/post/listAll",
+                getById: appConfig.rootServiceRoute + "api/post/",
+                getByCategoria:  appConfig.rootServiceRoute + "api/get/categoria/",
+                getByCity:  appConfig.rootServiceRoute + "api/get/cidade/",
+                deletePost: appConfig.rootServiceRoute + "api/post/delete",
+                editPost:  appConfig.rootServiceRoute + "api/post/update",
+                savePost: appConfig.rootServiceRoute + "api/post/create",
+                deleteAlotPost: appConfig.rootServiceRoute + "api/post/deleteAlot"
+             },
+              comment: {
+                listAll: appConfig.rootServiceRoute + "api/comment/listAll",
+                getById: appConfig.rootServiceRoute + "api/comment/",
+                deleteComment: appConfig.rootServiceRoute + "api/comment/delete",
+                editComment:  appConfig.rootServiceRoute + "api/comment/update",
+                saveComment: appConfig.rootServiceRoute + "api/comment/create",
+                deleteAlotComment: appConfig.rootServiceRoute + "api/comment/deleteAlot"    
+            }
         };
     }
 };

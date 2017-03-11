@@ -27,6 +27,7 @@ namespace ModernWebStore.CrossCutting
             container.RegisterType<ICountryRepository, CountryRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IContinentRepository, ContinentRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IPostRepository, PostRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICommentRepository, CommentRepository>(new HierarchicalLifetimeManager());
 
             container.RegisterType<IUserApplicationService, UserApplication>(new HierarchicalLifetimeManager());
             container.RegisterType<ICategoryApplicationService, CategoryApplication>(new HierarchicalLifetimeManager());
@@ -34,6 +35,7 @@ namespace ModernWebStore.CrossCutting
             container.RegisterType<ICountryApplicationService, CountryApplication>(new HierarchicalLifetimeManager());
             container.RegisterType<IContinentApplicationService, ContinentApplication>(new HierarchicalLifetimeManager());
             container.RegisterType<IPostApplicationService, PostApplication>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICommentApplicationService, CommentApplication>(new HierarchicalLifetimeManager());
 
             container.RegisterType<IHandler<DomainNotification>, DomainNotificationHandler>(new HierarchicalLifetimeManager());
 

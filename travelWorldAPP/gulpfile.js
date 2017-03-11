@@ -20,6 +20,11 @@ var paths = {
             'node_modules/md-data-table/md-data-table.min.css',
             'node_modules/angular-material-icons/angular-material-icons.css',
             'node_modules/angular-material-icons/angular-material-icons.min.css',
+            'node_modules/textangular/dist/textAngular.css',
+            'bower_components/froala-wysiwyg-editor/css/froala_editor.min.css',
+            'bower_components/froala-wysiwyg-editor/css/froala_editor.pkgd.min.css',
+            'bower_components/angular-loading-bar/build/loading-bar.min.css',
+            'bower_components/material-design-icons/iconfont/material-icons.css',
             'app/assets/css/app.css'
         ],
         destProject: 'app/build/css/',
@@ -31,7 +36,8 @@ var paths = {
             'node_modules/bootstrap/dist/**',
             'node_modules/angular-ui-bootstrap/dist/**',
             'node_modules/angular-xeditable/dist/**',
-            'node_modules/angular-ui-grid/**'
+            'node_modules/angular-ui-grid/**',
+            
         ],
         destProject: 'app/build/',
         dest: 'dist/app/build/'
@@ -46,6 +52,7 @@ var paths = {
     },
     scripts: {
         src: [
+            'bower_components/jquery/dist/jquery.min.js',
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'node_modules/angular-aria/angular-aria.js',
@@ -60,7 +67,16 @@ var paths = {
             'node_modules/angular-chart.js/angular-chart.js',
             'node_modules/angular-xeditable/dist/js/xeditable.js',
             'node_modules/angular-toastr/dist/angular-toastr.tpls.js',
-            'node_modules/bower_components/material-angular-paging/build/dist.min.js'
+            'node_modules/bower_components/material-angular-paging/build/dist.min.js',
+            'node_modules/textangular/dist/textAngular-rangy.min.js',
+            'node_modules/textangular/dist/textAngular-sanitize.min.js',
+            'node_modules/textangular/dist/textAngular.min.js',
+            'bower_components/froala-wysiwyg-editor/js/froala_editor.min.js',
+            'bower_components/froala-wysiwyg-editor/js/froala_editor.pkgd.min.js',
+            'bower_components/froala-wysiwyg-editor/js/angular-froala.js',
+            'bower_components/angular-socialshare/angular-socialshare.min.js',
+            'bower_components/angular-locale-pt-br/angular-locale_pt-br.js',
+            'bower_components/angular-loading-bar/build/loading-bar.min.js',
         ],
         destProject: 'app/build/',
         dest: 'dist/app/build/',
@@ -69,7 +85,7 @@ var paths = {
     folders: {
         src: [
             'app/assets/images/**',
-            'app/views/**'
+            'app/views/**',
         ],
         dest: 'dist/'
     },
@@ -91,9 +107,9 @@ gulp.task('css', function () {
 
     var filterEot = filter("**/fonts/**.eot", { restore: true });
     var filterSvg = filter("**/fonts/**.svg", { restore: true });
-    var filterTtf = filter("**/fonts/**.ttf", { restore: true });
-    var filterWoff = filter("**/fonts/**.woff", { restore: true });
-    var filterWoff2 = filter("**/fonts/**.woff2", { restore: true });
+    // var filterTtf = filter("**/fonts/**.ttf", { restore: true });
+    // var filterWoff = filter("**/fonts/**.woff", { restore: true });
+    // var filterWoff2 = filter("**/fonts/**.woff2", { restore: true });
 
     gulp.src(paths.cssFonts.src)
         .pipe(filterEot)
@@ -101,30 +117,30 @@ gulp.task('css', function () {
         .pipe(gulp.dest(paths.cssFonts.dest))
         .pipe(filterEot.restore)
 
-        .pipe(filterWoff)
-        .pipe(gulp.dest(paths.cssFonts.destProject))
-        .pipe(gulp.dest(paths.cssFonts.dest))
-        .pipe(filterWoff.restore)
+        // .pipe(filterWoff)
+        // .pipe(gulp.dest(paths.cssFonts.destProject))
+        // .pipe(gulp.dest(paths.cssFonts.dest))
+        // .pipe(filterWoff.restore)
 
-        .pipe(filterWoff2)
-        .pipe(gulp.dest(paths.cssFonts.destProject))
-        .pipe(gulp.dest(paths.cssFonts.dest)
-        .pipe(filterWoff2.restore)
+        // .pipe(filterWoff2)
+        // .pipe(gulp.dest(paths.cssFonts.destProject))
+        // .pipe(gulp.dest(paths.cssFonts.dest)
+        // .pipe(filterWoff2.restore)
 
         .pipe(filterSvg)
         .pipe(gulp.dest(paths.cssFonts.destProject))
         .pipe(gulp.dest(paths.cssFonts.dest))
         .pipe(filterSvg.restore)
 
-        .pipe(filterTtf)
-        .pipe(gulp.dest(paths.cssFonts.destProject))
-        .pipe(gulp.dest(paths.cssFonts.dest)));
+        // .pipe(filterTtf)
+        // .pipe(gulp.dest(paths.cssFonts.destProject))
+        // .pipe(gulp.dest(paths.cssFonts.dest)));
 
     filterEot = filter("**/*.eot", { restore: true });
     filterSvg = filter("**/*.svg", { restore: true });
-    filterTtf = filter("**/*.ttf", { restore: true });
-    filterWoff = filter("**/*.woff", { restore: true });
-    filterWoff2 = filter("**/*.woff2", { restore: true });
+    // filterTtf = filter("**/*.ttf", { restore: true });
+    // filterWoff = filter("**/*.woff", { restore: true });
+    // filterWoff2 = filter("**/*.woff2", { restore: true });
 
     gulp.src(paths.cssFonts.src)
        .pipe(filterEot)
@@ -132,24 +148,24 @@ gulp.task('css', function () {
        .pipe(gulp.dest(paths.css.dest))
        .pipe(filterEot.restore)
 
-       .pipe(filterWoff)
-       .pipe(gulp.dest(paths.css.destProject))
-       .pipe(gulp.dest(paths.css.dest))
-       .pipe(filterWoff.restore)
+    //    .pipe(filterWoff)
+    //    .pipe(gulp.dest(paths.css.destProject))
+    //    .pipe(gulp.dest(paths.css.dest))
+    //    .pipe(filterWoff.restore)
 
-       .pipe(filterWoff2)
-       .pipe(gulp.dest(paths.css.destProject))
-       .pipe(gulp.dest(paths.css.dest))
-       .pipe(filterWoff2.restore)
+    //    .pipe(filterWoff2)
+    //    .pipe(gulp.dest(paths.css.destProject))
+    //    .pipe(gulp.dest(paths.css.dest))
+    //    .pipe(filterWoff2.restore)
 
        .pipe(filterSvg)
        .pipe(gulp.dest(paths.css.destProject))
        .pipe(gulp.dest(paths.css.dest))
        .pipe(filterSvg.restore)
 
-       .pipe(filterTtf)
-       .pipe(gulp.dest(paths.css.destProject))
-       .pipe(gulp.dest(paths.css.dest));
+    //    .pipe(filterTtf)
+    //    .pipe(gulp.dest(paths.css.destProject))
+    //    .pipe(gulp.dest(paths.css.dest));
 });
 
 gulp.task('ts', function () {

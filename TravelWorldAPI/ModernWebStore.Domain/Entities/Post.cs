@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ModernWebStore.Domain.Entities
 {
@@ -6,10 +7,12 @@ namespace ModernWebStore.Domain.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public string Text { get; set; }
         public string Hashtag { get; set; }
         public DateTime Date { get; set; }
         public string Picture { get; set; }
         public string Video { get; set; }
+        public string icon { get; set; }
 
         public int CategoryId { get; set; }
         public Category Category { get; set; }

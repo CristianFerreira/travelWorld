@@ -7,6 +7,7 @@ namespace ModernWebStore.Domain.Services
     public interface ICityApplicationService
     {
         List<City> Get();
+        List<City> GetPostCity();
         List<City> Get(int skip, int take);
         City Get(int id);
         City Create(City city);

@@ -61,6 +61,11 @@ namespace ModernWebStore.ApplicationService
             return _repository.Get();
         }
 
+        public List<City> GetPostCity()
+        {
+            return _repository.GetPostCity();
+        }
+
         public City Get(int id)
         {
             return _repository.Get(id);

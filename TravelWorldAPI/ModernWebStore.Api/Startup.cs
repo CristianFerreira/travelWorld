@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin;
+using Microsoft.Owin.Extensions;
 using Microsoft.Owin.Security.OAuth;
 using Microsoft.Practices.Unity;
 using ModernWebStore.Api.Helpers;
@@ -26,6 +27,8 @@ namespace ModernWebStore.Api
 
             ConfigureOAuth(app, container.Resolve<IUserApplicationService>());
 
+            //
+            app.UseStageMarker(PipelineStage.MapHandler);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
@@ -39,7 +42,10 @@ namespace ModernWebStore.Api
             jsonSettings.Formatting = Formatting.Indented;
             jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+            formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;
+            formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            /*  formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects*/
+            ;
 
             config.MapHttpAttributeRoutes();
 

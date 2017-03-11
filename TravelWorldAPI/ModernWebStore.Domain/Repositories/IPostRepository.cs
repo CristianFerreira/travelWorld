@@ -12,5 +12,7 @@ namespace ModernWebStore.Domain.Repositories
         void Create(Post post);
         void Update(Post post);
         void Delete(Post post);
+        List<Post> BuscarPorCategoria(string categoria);
+        List<Post> BuscarPorCity(string city);
     }
 }

@@ -1,0 +1,4 @@
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.SharedKernel\bin\Debug\ModernWebStore.SharedKernel.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.SharedKernel\bin\Debug\ModernWebStore.SharedKernel.pdb
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.SharedKernel\obj\Debug\ModernWebStore.SharedKernel.dll
+C:\dev\travelWorld\TravelWorldAPI\ModernWebStore.SharedKernel\obj\Debug\ModernWebStore.SharedKernel.pdb

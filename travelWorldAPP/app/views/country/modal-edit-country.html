@@ -11,7 +11,6 @@
         </md-toolbar>
         <md-dialog-content>
             <div class="md-dialog-content ">
-                {{vm.country.continent}}
                 <md-input-container class="md-block" flex="100" layout="row" layout-padding>
                     <md-select ng-model="vm.countryEdit.continent" placeholder="Informe o continente" ng-model-options="{trackBy: '$value.id'}">
                         <md-option ng-value="continent" ng-repeat="continent in vm.continents"> {{continent.name}}</md-option>
@@ -30,7 +29,7 @@
                         <div ng-message="maxlength">Nome deve ter no maximo 50 caracteres.</div>
                     </div>
                     <div flex-sm="50" layout layout-align="center center" class="padding-top-20">
-                        <md-button class="md-raised md-primary" aria-label="Close dialog" ng-disabled="form.$invalid" type="submit" ng-click="vm.editCountry(vm.countryEdit)">Editar País</md-button>
+                        <md-button class="md-raised md-primary" aria-label="Close dialog" ng-disabled="form.$invalid" type="submit" ng-click="vm.editCountry()">Editar País</md-button>
                     </div>
                 </md-input-container>
 

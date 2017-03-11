@@ -26,9 +26,11 @@
 /// <reference path="../models/api-models/Continent.ts" />
 /// <reference path="../models/api-models/Country.ts" />
 /// <reference path="../models/api-models/City.ts" />
+/// <reference path="../models/api-models/Comment.ts" />
+
+/// <reference path="../models/api-models/ABS/PostABS.ts" />
 
 /// <reference path="../models/app-models/LoginModel.ts" />
-
 
 /// <reference path="../services/app-service-base/IAppService.ts" />
 /// <reference path="../services/app-service-base/AppServiceBase.ts" />
@@ -36,7 +38,9 @@
 /// <reference path="../services/ContinentService.ts" />
 /// <reference path="../services/CountryService.ts" />
 /// <reference path="../services/CityService.ts" />
+/// <reference path="../services/PostService.ts" />
 /// <reference path="../services/AutenticacaoService.ts" />
+/// <reference path="../services/CommentService.ts" />
 
 
 // Controller
@@ -64,6 +68,9 @@
 /// <reference path="../controllers/city/ModalCreateCityController.ts" />
 /// <reference path="../controllers/city/ModalEditCityController.ts" />
 /// <reference path="../controllers/city/ModalDeleteCityController.ts" />
+
+/// <reference path="../controllers/post/PostController.ts" />
+/// <reference path="../controllers/post/ModalDeletePostController.ts" />
 
 /// <reference path="../controllers/menu/SideBarController.ts" />
 /// <reference path="../controllers/HomeController.ts" />

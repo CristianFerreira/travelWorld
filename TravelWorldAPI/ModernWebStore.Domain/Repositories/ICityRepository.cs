@@ -6,6 +6,7 @@ namespace ModernWebStore.Domain.Repositories
     public interface ICityRepository
     {
         List<City> Get();
+        List<City> GetPostCity();       
         List<City> Get(int skip, int take);
         City Get(int id);
         void Create(City city);

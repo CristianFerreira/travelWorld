@@ -9,16 +9,20 @@ namespace ModernWebStore.Domain.Entities
     {
 
         protected User() { }
-        public User (string email, string password, bool isAdmin)
+        public User (string name, string email, string password, string link, bool isAdmin)
         {
+            this.Name = name;
             this.Email = email;
             this.Password = StringHelper.Encrypt(password);
+            this.Link = link;
             this.IsAdmin = isAdmin;
         }
 
         public int Id { get; private set; }
+        public string Name { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
+        public string Link { get; private set; }
         public bool IsAdmin { get; private set; }
 
         public virtual ICollection<Post> posts { get; set; }

@@ -28,7 +28,7 @@ module Travel_World {
         }
 
         public createCity() :void {   
-          console.log(this.city);      
+   
           this.cityService.saveCity(this.city)
                 .then((data) => {                 
                     this.mdDialog.cancel();

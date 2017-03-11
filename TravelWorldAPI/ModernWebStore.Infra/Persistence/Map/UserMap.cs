@@ -15,6 +15,14 @@ namespace ModernWebStore.Infra.Persistence.Map
                 .HasMaxLength(160)
                 .IsRequired();
 
+            Property(x => x.Name)
+                .HasMaxLength(60)
+                .IsRequired();
+
+            Property(x => x.Link)
+                .HasMaxLength(500)
+                .IsOptional();
+
             Property(x => x.Password)
                 .HasMaxLength(32)
                 .IsFixedLength()

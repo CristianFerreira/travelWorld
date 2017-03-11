@@ -22,9 +22,9 @@ module Travel_World {
             this.countryEdit = this.country;
         }
 
-        public editCountry(country :Country) :void {      
-        console.log(this.country);  
-          this.countryService.editCountry(country)
+        public editCountry() :void {    
+          this.country.continentId = this.countryEdit.continent.id;  
+          this.countryService.editCountry(this.country)
                 .then((data) => {                 
                     this.mdDialog.cancel();
                     this.toastr.success("Pais editado com sucesso!");                          

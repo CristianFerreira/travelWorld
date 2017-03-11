@@ -1,5 +1,9 @@
-﻿using Microsoft.Owin.Security.OAuth;
+﻿using KTAX_SOS_Workflow.Domain.Sistema;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.OAuth;
 using ModernWebStore.Domain.Services;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading;
@@ -34,13 +38,52 @@ namespace ModernWebStore.Api.Security
 
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
 
-            identity.AddClaim(new Claim(ClaimTypes.Name, user.Email));
-            identity.AddClaim(new Claim(ClaimTypes.Role, user.IsAdmin ? "admin" : ""));
+            // adiciona o sistema logado para identificacao na tela
+            var props = new AuthenticationProperties();
 
-            GenericPrincipal principal = new GenericPrincipal(identity, new string[] { user.IsAdmin ? "admin" : "" });
-            Thread.CurrentPrincipal = principal;
+            var sistemaContexto = new SistemaContexto
+            {
+                UsuarioLogado = user
+            };
 
-            context.Validated(identity);
+            var sistemaContextoJson = JsonConvert.SerializeObject(sistemaContexto, new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            });
+
+            identity.AddClaim(new Claim("sistema_contexto", sistemaContextoJson));
+
+            props.Dictionary.Add("sistema_contexto", sistemaContextoJson);
+
+            //var userEmail = JsonConvert.SerializeObject(user.Email, new JsonSerializerSettings
+            //{
+            //    ContractResolver = new CamelCasePropertyNamesContractResolver()
+            //});
+
+            //var userAdmin = JsonConvert.SerializeObject(user.IsAdmin ? "admin" : "", new JsonSerializerSettings
+            //{
+            //    ContractResolver = new CamelCasePropertyNamesContractResolver()
+            //});
+
+            //identity.AddClaim(new Claim(ClaimTypes.Name, userEmail));
+            //identity.AddClaim(new Claim(ClaimTypes.Role, userAdmin));
+
+            //GenericPrincipal principal = new GenericPrincipal(identity, new string[] { user.IsAdmin ? "admin" : "" });
+            //Thread.CurrentPrincipal = principal;
+
+            //context.Validated(identity);
+
+            var ticket = new AuthenticationTicket(identity, props);
+            context.Validated(ticket);
         }
+
+        public override Task TokenEndpoint(OAuthTokenEndpointContext context)
+        {
+            foreach (var property in context.Properties.Dictionary)
+                context.AdditionalResponseParameters.Add(property.Key, property.Value);
+
+            return Task.FromResult<object>(null);
+        }
+
     }
 }

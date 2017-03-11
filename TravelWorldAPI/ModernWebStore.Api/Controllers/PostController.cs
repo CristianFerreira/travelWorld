@@ -1,5 +1,6 @@
 ﻿using ModernWebStore.Domain.Entities;
 using ModernWebStore.Domain.Services;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -45,11 +46,30 @@ namespace ModernWebStore.Api.Controllers
             return CreateResponse(HttpStatusCode.Created, post);
         }
 
+        [HttpGet]
+        //[Authorize]
+        [Route("api/get/categoria/{categoria}")]
+        public Task<HttpResponseMessage> BuscarPorCategoria(string categoria)
+        {
+            var posts = _service.BuscarPorCategoria(categoria);
+            return CreateResponse(HttpStatusCode.Created, posts);
+        }
+
+        [HttpGet]
+        //[Authorize]
+        [Route("api/get/cidade/{city}")]
+        public Task<HttpResponseMessage> BuscarPorCity(string city)
+        {
+            var cities = _service.BuscarPorCity(city);
+            return CreateResponse(HttpStatusCode.Created, cities);
+        }
+
         [HttpPost]
         //[Authorize]
         [Route("api/post/create")]
         public Task<HttpResponseMessage> Post(Post post)
-        {
+        {    
+            post.Date = DateTime.Now;
             var postRegister = _service.Create(post);
             return CreateResponse(HttpStatusCode.Created, postRegister);
         }

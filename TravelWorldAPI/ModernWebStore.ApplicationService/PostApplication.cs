@@ -19,6 +19,9 @@ namespace ModernWebStore.ApplicationService
 
         public Post Create(Post post)
         {
+            post.Category = null;
+            post.City = null;
+            post.User = null;
             _repository.Create(post);
 
             if (Commit())
@@ -65,6 +68,16 @@ namespace ModernWebStore.ApplicationService
             return _repository.Get(id);
         }
 
+        public List<Post> BuscarPorCategoria(string categoria)
+        {
+            return _repository.BuscarPorCategoria(categoria);
+        }
+
+        public List<Post> BuscarPorCity(string city)
+        {
+            return _repository.BuscarPorCity(city);
+        }
+
         public List<Post> Get(int skip, int take)
         {
             return _repository.Get(skip, take);
@@ -72,6 +85,10 @@ namespace ModernWebStore.ApplicationService
 
         public Post Update(Post post)
         {
+
+            post.Category = null;
+            post.City = null;
+            post.User = null;
             _repository.Update(post);
 
             if (Commit())

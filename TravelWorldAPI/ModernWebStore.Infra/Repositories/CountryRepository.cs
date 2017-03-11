@@ -19,7 +19,6 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Create(Country country)
         {
-            _context.Countries.Attach(country);
             _context.Countries.Add(country);
 
         }
@@ -48,8 +47,7 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Update(Country country)
         {
-            
-            //_context.Countries.Attach(country);
+            country.Continent = null;
             _context.Entry<Country>(country).State = EntityState.Modified;
         }
     }

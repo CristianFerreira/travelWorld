@@ -22,8 +22,8 @@
                     </div>
                 </md-input-container>
                 <md-input-container class="md-block" flex="100" layout="row" layout-padding>
-                    <md-select ng-disabled="form.continente.$invalid" ng-model="vm.city.country" placeholder="Informe o pais" name="pais" required>
-                        <md-option ng-repeat="country in vm.filterCountries" ng-value="country">
+                    <md-select ng-disabled="form.continente.$invalid" ng-model="vm.city.countryId" placeholder="Informe o pais" name="pais" required>
+                        <md-option ng-repeat="country in vm.filterCountries" ng-value="country.id">
                             {{country.name}}
                         </md-option>
                     </md-select>

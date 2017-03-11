@@ -223,6 +223,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ContinentController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\PostController.cs" />
@@ -231,6 +232,8 @@
     <Compile Include="Helpers\UnityResolverHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Sistema\Instancia.cs" />
+    <Compile Include="Sistema\SistemaContexto.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

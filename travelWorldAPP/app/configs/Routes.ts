@@ -3,11 +3,27 @@
 module Travel_World {
     'use strict';
 
-    function config($routeProvider: ng.route.IRouteProvider, $mdThemingProvider: any) {
-   
+    function config($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) {
+
+        $locationProvider.html5Mode(true).hashPrefix('!'); 
 
         $routeProvider
             .when("/", {
+                templateUrl: "app/views/home.html",
+                controller: "HomeController",
+                controllerAs: "vm"
+            })
+             .when("/postagens/:categoria", {
+                templateUrl: "app/views/home.html",
+                controller: "HomeController",
+                controllerAs: "vm"
+            })
+            .when("/postagens/cidade/:city", {
+                templateUrl: "app/views/home.html",
+                controller: "HomeController",
+                controllerAs: "vm"
+            })
+            .when("/postagem/:id", {
                 templateUrl: "app/views/home.html",
                 controller: "HomeController",
                 controllerAs: "vm"
@@ -32,6 +48,16 @@ module Travel_World {
                 controller: "CityController",
                 controllerAs: "vm"	
             })
+            .when("/postagem", {
+                templateUrl: "app/views/post/posts.html",
+                controller: "PostController",
+                controllerAs: "vm"	
+            })
+            .when("/postagem/edit/:id", {
+                templateUrl: "app/views/post/posts.html",
+                controller: "PostController",
+                controllerAs: "vm"	
+            })         
             .when("/login", {
                 templateUrl: "app/views/autenticacao/login.html",
                 controller: "LoginController",
@@ -49,7 +75,7 @@ module Travel_World {
             });
     }
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider','$locationProvider'];
 
     angular.module(appConfig.appName).config(config);
 }

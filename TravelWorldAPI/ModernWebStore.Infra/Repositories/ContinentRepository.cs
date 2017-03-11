@@ -47,7 +47,7 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Update(Continent continent)
         {
-            _context.Continents.Attach(continent);
+            
             _context.Entry(continent)
                 .State = System.Data.Entity.EntityState.Modified;
         }

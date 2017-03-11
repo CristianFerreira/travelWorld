@@ -19,7 +19,7 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Create(City city)
         {
-            _context.Cities.Attach(city);
+            city.Country = null;
             _context.Cities.Add(city);   
         }
 
@@ -32,6 +32,13 @@ namespace ModernWebStore.Infra.Repositories
         {
             return _context.Cities.Include(c => c.Country.Continent).ToList();
         }
+
+
+        public List<City> GetPostCity()
+        {
+            return _context.Cities.Include(c => c.Country.Continent).ToList();
+        }
+      
 
         public City Get(int id)
         {
@@ -47,7 +54,7 @@ namespace ModernWebStore.Infra.Repositories
 
         public void Update(City city)
         {
-            //_context.Cities.Attach(city);
+            city.Country = null;
             _context.Entry(city)
                  .State = EntityState.Modified;
         }

@@ -12,8 +12,8 @@
         <md-dialog-content>
             <div class="md-dialog-content ">
                 <md-input-container class="md-block" flex="100" layout="row" layout-padding>
-                    <md-select ng-model="vm.country.continent" placeholder="Informe o continente" name="select" required>
-                        <md-option ng-repeat="continent in vm.continents" ng-value="continent">
+                    <md-select ng-model="vm.country.continentId" placeholder="Informe o continente" name="select" required>
+                        <md-option ng-repeat="continent in vm.continents" ng-value="continent.id">
                             {{continent.name}}
                         </md-option>
                     </md-select>

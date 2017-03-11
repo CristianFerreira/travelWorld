@@ -3,10 +3,12 @@ module Travel_World {
     export class Post {
         public id: number;
         public title: string;
-        public hashTag: string;
+        public text: string;
+        public hashtag: string;
         public date: Date;
         public picture: string;
         public video: string;
+        public icon: string;
 
         public categoryId: number;
         public category: Category;
